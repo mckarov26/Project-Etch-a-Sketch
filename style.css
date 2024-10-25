@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    
+    text-align: center;
+}
+#container {
+    display: flex;
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    
+}
+
+button {
+    margin: 5px 0px;
+    padding: 2px;
+}
+
+.cell {
+    display: flex;
+    flex: 1 1 calc(100% / var(--size));
+    width: 20px;  
+    height: calc(100% / var(--size));
+    background-color: lightgrey;
+    border: 1px solid black;
+    margin: 0px; /* Optional spacing between cells */
+    
+    
+}
+
+
+
+
+
