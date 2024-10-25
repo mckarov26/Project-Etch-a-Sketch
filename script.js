@@ -1,13 +1,19 @@
 const container = document.getElementById("container");
+const gridSize = document.getElementById("gridSize");
+const blackGrid = document.getElementById("blackGrid");
 
 
 
-//const size = prompt("Choose 1-50"); // number of squares per row or column.
-const size = 16;
 
 
-document.documentElement.style.setProperty("--size", size)
+
+
+
+
+
 const createGrid = (size) => {
+
+    container.innerHTML = "";
     
     for (let i = 0; i < size * size; i++) {
            
@@ -18,7 +24,7 @@ const createGrid = (size) => {
 
 
         divCell.addEventListener("mouseover", () => {
-            divCell.style.backgroundColor = "red";
+            divCell.style.backgroundColor = "black";
             
         })
 
@@ -32,7 +38,25 @@ const createGrid = (size) => {
     
 }   
 
-document.getElementById("gridSize")
+gridSize.addEventListener("click", () => {
+    let squaresPerSide = prompt("Choose 1-100 for the number of squares per side for the new grid:");
+    squaresPerSide = parseInt(squaresPerSide);
+    document.documentElement.style.setProperty("--size", squaresPerSide)
+
+    if (!isNaN(squaresPerSide) && squaresPerSide >= 1 && squaresPerSide <= 100) {
+        createGrid(squaresPerSide);
+    } else {
+        alert("Please enter a valid NUMBER between 1 and 100");
+
+    }
+})
 
 
-createGrid(size);   
+
+
+
+
+
+
+
+
