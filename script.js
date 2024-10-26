@@ -92,7 +92,7 @@ gridBlack.addEventListener("click", () => {
 })
 
 
-//This is to reset the color from it default
+//This is to reset the color to it default color
 
 gridReset.addEventListener("click", () => {
     const cells = document.querySelectorAll(".cell");
